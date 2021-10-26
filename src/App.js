@@ -4,6 +4,7 @@ function App() {
 	return (
 		<div className='App'>
 			<h1>Flixit Movies</h1>
+      <h4>search for your favorite movies</h4>
 		</div>
 	);
 }
