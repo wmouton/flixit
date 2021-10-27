@@ -1,5 +1,6 @@
 import React from 'react';
 
+// the home functional component
 const Home = () => {
 	return (
 		<div>

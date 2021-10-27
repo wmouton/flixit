@@ -1,4 +1,6 @@
+// import the axios library
 import axios from 'axios';
+// query-string library
 import queryString from 'query-string';
 // import api config file
 import apiConfig from './apiConfig';
@@ -9,6 +11,7 @@ const axiosClient = axios.create({
 	headers: {
 		'Content-Type': 'application/json',
 	},
+  // serializer for the query
 	paramsSerializer: (params) =>
 		queryString.stringify({ ...params, api_key: apiConfig.apiKey }),
 });

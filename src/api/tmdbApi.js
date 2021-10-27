@@ -1,22 +1,27 @@
+// import axios library
 import axiosClient from './axiosClient';
 
+// exported category constant
 export const category = {
 	movie: 'movie',
 	tv: 'tv',
 };
 
+// exported movie type constant
 export const movieType = {
 	upcoming: 'upcoming',
 	popular: 'popular',
 	top_rated: 'top_rated',
 };
 
+// exported tv type constant
 export const tvType = {
 	popular: 'popular',
 	top_rated: 'top_rated',
 	on_the_air: 'on_the_air',
 };
 
+// the movie database API data
 const tmdbApi = {
 	getMoviesList: (type, params) => {
 		const url = 'movie/' + movieType[type];
