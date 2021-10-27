@@ -1,6 +1,7 @@
 import './App.scss';
 import Header from './components/header/Header';
 import Home from './pages/Home';
+import Catalog from './pages/Catalog';
 import Footer from './components/footer/Footer';
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
 			<div>
 				<Home />
+				<Catalog />
 			</div>
 
 			<div>
