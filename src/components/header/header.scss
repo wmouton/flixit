@@ -1,6 +1,9 @@
 @use '../../scss/' as *;
 
 .logo {
+  padding-left: 0.5%;
+  padding-top: 0.5%;
+
 	@include flex(center, unset);
 
 	img {
@@ -15,7 +18,12 @@
 }
 
 .movies {
-  padding-left: 100px;
+  text-align: left;
+  font-size: 60%;
+  padding-left: 0.5%;
+  padding-bottom: 0.5%;
+
+  // padding-left: 100px;
 }
 
 .movies:hover {
