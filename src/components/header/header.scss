@@ -1,9 +1,6 @@
 @use '../../scss/' as *;
 
 .logo {
-	font-size: 1.3rem;
-	font-weight: 600;
-
 	@include flex(center, unset);
 
 	img {
@@ -18,6 +15,9 @@
 }
 
 .movies {
-  // transform: rotate(270deg);
   padding-left: 100px;
+}
+
+.movies:hover {
+  color: $main-color;
 }

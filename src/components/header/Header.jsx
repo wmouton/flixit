@@ -34,7 +34,7 @@ const Header = () => {
 			<div className='header_wrap container'>
 				<div className='logo'>
 					<img src={logo} alt='logo' />
-					<Link to='/'></Link>
+					<Link to='/' />
 				</div>
 					<h6 className='movies'>movies</h6>
 				<ul className='header_nav'>
