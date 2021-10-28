@@ -1,10 +1,19 @@
 import React from 'react';
+// imports from react-router-dom
+import { Route, Switch } from 'react-router-dom';
+// import components
+import Home from '../pages/Home';
+import Catalog from '../pages/Catalog';
+import Detail from '../pages/Detail';
 
 const Routes = () => {
 	return (
-		<div>
-			<h1>Routes</h1>
-		</div>
+		<Switch>
+			<Route path='/:category/search/:keyword' component={Catalog} />
+			<Route path='/:category/:id' component={Detail} />
+			<Route path='/:category' component={Catalog} />
+			<Route path='/' component={Home} />
+		</Switch>
 	);
 };
 
