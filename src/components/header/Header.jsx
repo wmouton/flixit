@@ -29,8 +29,14 @@ const Header = () => {
 	const active = headerNav.findIndex((e) => e.path === pathname);
 
 	return (
-		<div ref={headerRef} className='header'>
-			<h1>Flixit Movies</h1>
+		<div className='header' ref={headerRef}>
+			<div className='header_wrap container'>
+				<div className='logo'>
+					<img src={logo} alt='logo' />
+					<Link to='/'>flixit</Link>
+				</div>
+				<ul></ul>
+			</div>
 		</div>
 	);
 };
