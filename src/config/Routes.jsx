@@ -6,6 +6,7 @@ import Home from '../pages/Home';
 import Catalog from '../pages/Catalog';
 import Detail from '../pages/Detail';
 
+// routes functional component
 const Routes = () => {
 	return (
 		<Switch>
