@@ -26,6 +26,7 @@ const Header = () => {
 	const { pathname } = useLocation();
 	const headerRef = useRef(null);
 
+	// check if path === pathname
 	const active = headerNav.findIndex((e) => e.path === pathname);
 
 	return (
@@ -35,7 +36,13 @@ const Header = () => {
 					<img src={logo} alt='logo' />
 					<Link to='/'>flixit</Link>
 				</div>
-				<ul></ul>
+				<ul className='header_nav'>
+					{headerNav.map((e, i) => (
+						<li className={`${i === active ? 'active' : ''}`} key={i}>
+							<Link to={e.path}>{e.display}</Link>
+						</li>
+					))}
+				</ul>
 			</div>
 		</div>
 	);
