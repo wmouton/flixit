@@ -3,6 +3,7 @@ import Header from './components/header/Header';
 import Home from './pages/Home';
 import Catalog from './pages/Catalog';
 import Detail from './pages/Detail';
+import Routes from './config/Routes';
 import Footer from './components/footer/Footer';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
 				<Home />
 				<Catalog />
 				<Detail />
+				<Routes />
 			</div>
 
 			<div>
