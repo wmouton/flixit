@@ -32,17 +32,40 @@
 
 .header {
 	height: $header-height;
-  position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 99;
-  transition: height .3s ease, background-color .3s ease;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 99;
+	transition: height 0.3s ease, background-color 0.3s ease;
 
-  &.shrink {
-    height: $header-shrink-height;
-    background-color: $body-bg;
-  }
+	&.shrink {
+		height: $header-shrink-height;
+		background-color: $body-bg;
+	}
 
+	&_wrap {
+		@include flex(center, space-between);
+		height: 100%;
+		padding: 0 2rem;
 
+		@include mobile {
+			justify-content: center;
+		}
+
+    &_nav {
+      @include flex(center, unset);
+
+      & > * ~ * {
+        margin-left: 2rem;
+      }
+
+      li {
+        padding: 5px 0;
+        font-weight: 700;
+        position: relative;
+        font-size: 1.5rem;
+      }
+    }
+	}
 }
