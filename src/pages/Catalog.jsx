@@ -4,7 +4,7 @@ import React from 'react';
 const Catalog = () => {
 	return (
 		<div>
-			<h1>Catalog</h1>
+			<h6>Catalog</h6>
 		</div>
 	);
 };

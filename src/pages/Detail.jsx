@@ -4,7 +4,7 @@ import React from 'react';
 const Detail = () => {
 	return (
 		<div>
-			<h1>Detail</h1>
+			<h6>Detail</h6>
 		</div>
 	);
 };

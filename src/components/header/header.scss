@@ -1,31 +1,20 @@
 @use '../../scss/' as *;
 
 .logo {
-	padding-left: 0.3%;
-	padding-top: 0.3%;
+	padding-left: 0.1%;
+	padding-top: 0.1%;
 
 	@include flex(center, unset);
 
 	img {
 		margin-right: 10px;
-		width: 100px;
+		width: 150px;
 
 		@include mobile {
 			width: 30px;
 			margin-right: 0;
 		}
 	}
-}
-
-.movies {
-	text-align: left !important;
-	font-size: 60%;
-	padding-left: 0.5%;
-	padding-bottom: 0.5%;
-}
-
-.movies:hover {
-	color: $main-color;
 }
 
 .header {
@@ -64,18 +53,24 @@
 			font-weight: 300;
 			position: relative;
 			font-size: 1.1rem;
+			
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				transform: translateX(-50%);
+				width: 0;
+				transition: width 0.5s ease;
+				height: 2px;
+				background-color: $main-color;
+			}
+	
+			&.active::after,
+			&:hover::after {
+				width: 100%;
+			}
 		}
 
-		&::after {
-			content: '';
-			position: absolute;
-			bottom: 0;
-			left: 50%;
-			transform: translateX(-50%);
-			width: 0;
-			transition: width 0.5s ease;
-      height: 2px;
-      background-color: $main-color;
-		}
 	}
 }
