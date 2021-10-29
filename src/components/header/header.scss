@@ -1,31 +1,48 @@
 @use '../../scss/' as *;
 
 .logo {
-  padding-left: 0.5%;
-  padding-top: 0.5%;
+	padding-left: 0.5%;
+	padding-top: 0.5%;
 
 	@include flex(center, unset);
 
 	img {
 		margin-right: 10px;
-    width: 150px;
+		width: 110px;
 
-    @include mobile {
-      width: 30px;
-      margin-right: 0;
-    }
+		@include mobile {
+			width: 30px;
+			margin-right: 0;
+		}
 	}
 }
 
 .movies {
-  text-align: left;
-  font-size: 60%;
-  padding-left: 0.5%;
-  padding-bottom: 0.5%;
+	text-align: left;
+	font-size: 60%;
+	padding-left: 0.5%;
+	padding-bottom: 0.5%;
 
-  // padding-left: 100px;
+	// padding-left: 100px;
 }
 
 .movies:hover {
-  color: $main-color;
+	color: $main-color;
+}
+
+.header {
+	height: $header-height;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  transition: height .3s ease, background-color .3s ease;
+
+  &.shrink {
+    height: $header-shrink-height;
+    background-color: $body-bg;
+  }
+
+
 }

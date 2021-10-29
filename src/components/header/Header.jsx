@@ -36,7 +36,7 @@ const Header = () => {
 					<img src={logo} alt='logo' />
 					<Link to='/' />
 				</div>
-					<h6 className='movies'>a plathora of movies to choose from</h6>
+					<h6 className='movies'>the best movies and series</h6>
 				<ul className='header_nav'>
 					{headerNav.map((e, i) => (
 						<li className={`${i === active ? 'active' : ''}`} key={i}>
