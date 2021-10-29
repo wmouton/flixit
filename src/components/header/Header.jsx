@@ -31,13 +31,12 @@ const Header = () => {
 
 	return (
 		<div className='header' ref={headerRef}>
-			<div className='header_wrap container'>
+			<div className='header__wrap container'>
 				<div className='logo'>
 					<img src={logo} alt='logo' />
 					<Link to='/' />
 				</div>
-					{/* <h6 className='movies'>the best movies and series</h6> */}
-				<ul className='header_nav'>
+				<ul className='header__nav'>
 					{headerNav.map((e, i) => (
 						<li className={`${i === active ? 'active' : ''}`} key={i}>
 							<Link to={e.path}>{e.display}</Link>

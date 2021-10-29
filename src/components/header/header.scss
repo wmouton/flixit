@@ -1,14 +1,14 @@
 @use '../../scss/' as *;
 
 .logo {
-	padding-left: 0.5%;
-	padding-top: 0.5%;
+	padding-left: 0.3%;
+	padding-top: 0.3%;
 
 	@include flex(center, unset);
 
 	img {
 		margin-right: 10px;
-		width: 110px;
+		width: 100px;
 
 		@include mobile {
 			width: 30px;
@@ -18,12 +18,10 @@
 }
 
 .movies {
-	text-align: left;
+	text-align: left !important;
 	font-size: 60%;
 	padding-left: 0.5%;
 	padding-bottom: 0.5%;
-
-	// padding-left: 100px;
 }
 
 .movies:hover {
@@ -31,41 +29,41 @@
 }
 
 .header {
-	height: $header-height;
-	position: relative;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 99;
-	transition: height 0.3s ease, background-color 0.3s ease;
+  height: $header-height;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  transition: height 0.3s ease, background-color 0.3s ease;
 
-	&.shrink {
-		height: $header-shrink-height;
-		background-color: $body-bg;
-	}
+  &.shrink {
+      height: $header-shrink-height;
+      background-color: $body-bg;
+  }
 
-	&_wrap {
-		@include flex(center, space-between);
-		height: 100%;
-		padding: 0 2rem;
+  &__wrap {
+      @include flex(center, space-between);
+      height: 100%;
+      padding: 0 2rem;
 
-		@include mobile {
-			justify-content: center;
-		}
+      @include mobile {
+          justify-content: center;
+      }
+  }
 
-    &_nav {
+  &__nav {
       @include flex(center, unset);
 
       & > * ~ * {
-        margin-left: 2rem;
+          margin-left: 2rem;
       }
 
       li {
-        padding: 5px 0;
-        font-weight: 700;
-        position: relative;
-        font-size: 1.5rem;
-      }
-    }
+          padding: 5px 0;
+          font-weight: 300;
+          position: relative;
+          font-size: 1.1rem;
+		}
 	}
 }
