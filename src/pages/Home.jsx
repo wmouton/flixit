@@ -1,11 +1,13 @@
 import React from 'react';
+// import components
+import HeroSlide from '../components/hero-slide/HeroSlide';
 
 // the home functional component
 const Home = () => {
 	return (
-		<div>
-			<h6>Home</h6>
-		</div>
+		<>
+			<HeroSlide />
+		</>
 	);
 };
 
