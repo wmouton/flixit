@@ -15,9 +15,11 @@ import apiConfig from '../../api/apiConfig';
 // import css
 import './hero-slide.scss';
 
+// hero slide functional component
 const HeroSlide = () => {
 	SwiperCore.use([Autoplay]);
 
+	// add state and initialize to empty array
 	const [movieItems, setMovieItems] = useState([]);
 
 	useEffect(() => {
@@ -27,7 +29,8 @@ const HeroSlide = () => {
 				const response = await tmdbApi.getMoviesList(movieType.popular, {
 					params,
 				});
-				setMovieItems(response.results.slice(0, 4));
+				// slice to 4 results
+				setMovieItems(response.results.slice(0, 3));
 				console.log(response);
 			} catch {
 				console.log('error');
@@ -63,15 +66,18 @@ const HeroSlide = () => {
 	);
 };
 
+// hero slide item functional component
 const HeroSlideItem = (props) => {
 	let history = useHistory();
 
 	const item = props.item;
 
+	// original background movie image
 	const background = apiConfig.originalImage(
 		item.backdrop_path ? item.backdrop_path : item.poster_path
 	);
 
+	// set modal to active functional component
 	const setModalActive = async () => {
 		const modal = document.querySelector(`#modal_${item.id}`);
 
@@ -115,6 +121,7 @@ const HeroSlideItem = (props) => {
 	);
 };
 
+// trailer modal functional component
 const TrailerModal = (props) => {
 	const item = props.item;
 
