@@ -10,7 +10,7 @@ import { BrowserRouter, Route } from 'react-router-dom';
 // import components
 import Header from './components/header/Header';
 import Routes from './config/Routes';
-import Footer from './components/footer/Footer';
+// import Footer from './components/footer/Footer';
 
 function App() {
 	return (
@@ -20,7 +20,7 @@ function App() {
 					<>
 						<Header {...props} />
 						<Routes />
-						<Footer />
+						{/* <Footer /> */}
 					</>
 				)}
 			/>

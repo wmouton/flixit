@@ -50,8 +50,9 @@ const Header = () => {
 		<div className='header' ref={headerRef}>
 			<div className='header__wrap container'>
 				<div className='logo'>
-					<img src={logo} alt='logo' />
-					<Link to='/' />
+					<Link to='/'>
+						<img src={logo} alt='logo' />
+					</Link>
 				</div>
 				<ul className='header__nav'>
 					{headerNav.map((e, i) => (

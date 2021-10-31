@@ -27,7 +27,7 @@ const HeroSlide = () => {
 				const response = await tmdbApi.getMoviesList(movieType.popular, {
 					params,
 				});
-				setMovieItems(response.results.slice(1, 4));
+				setMovieItems(response.results.slice(0, 4));
 				console.log(response);
 			} catch {
 				console.log('error');
@@ -63,8 +63,10 @@ const HeroSlide = () => {
 	);
 };
 
-const HeroSlideItem = ({className, item}) => {
+const HeroSlideItem = (props) => {
 	let history = useHistory();
+
+	const item = props.item;
 
 	const background = apiConfig.originalImage(
 		item.backdrop_path ? item.backdrop_path : item.poster_path
@@ -89,7 +91,7 @@ const HeroSlideItem = ({className, item}) => {
 
 	return (
 		<div
-			className={`hero-slide__item ${className}`}
+			className={`hero-slide__item ${props.className}`}
 			style={{ backgroundImage: `url(${background})` }}
 		>
 			<div className='hero-slide__item__content container'>
@@ -113,7 +115,8 @@ const HeroSlideItem = ({className, item}) => {
 	);
 };
 
-const TrailerModal = ({item}) => {
+const TrailerModal = (props) => {
+	const item = props.item;
 
 	const iframeRef = useRef(null);
 
