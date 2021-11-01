@@ -2,7 +2,7 @@ import React from 'react';
 // import css
 import './page-header.scss';
 // import footer background
-import bg from '../../assets/footer-bg.jpg';
+import bg from '../../assets/img/footer-bg.jpg';
 
 const PageHeader = (props) => {
 	return (
