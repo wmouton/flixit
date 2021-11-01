@@ -20,8 +20,18 @@ const CastList = (props) => {
 	}, [category, props.id]);
 
 	return (
-		<div>
-			<h6>cast list setup</h6>
+		<div className='casts'>
+			{casts.map((item, i) => (
+				<div key={i} className='casts__item'>
+					<div
+						className='casts__item__img'
+						style={{
+							backgroundImage: `url(${apiConfig.w500Image(item.profile_path)})`,
+						}}
+					></div>
+					<p className='casts__item__name'>{item.name}</p>
+				</div>
+			))}
 		</div>
 	);
 };
