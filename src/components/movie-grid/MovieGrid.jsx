@@ -107,4 +107,17 @@ const MovieSearch = (props) => {
 			history.push(`/${category[props.category]}/search/${keyword}`);
 		}
 	}, [keyword, props.category, history]);
+
+	useEffect(() => {
+		const enterEvent = (e) => {
+			e.preventDefault();
+			if (e.keyCode === 13) {
+				goToSearch();
+			}
+		};
+		document.addEventListener('keyup', enterEvent);
+		return () => {
+			document.removeEventListener('keyup', enterEvent);
+		};
+	}, [keyword, goToSearch]);
 };
