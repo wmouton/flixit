@@ -4,4 +4,13 @@
 	background-position: top;
 	background-size: cover;
 	background-repeat: no-repeat;
+
+	&__content {
+		max-width: 1000px;
+
+		&__logo {
+			@include flex(center, center);
+			margin-bottom: 3rem;
+		}
+	}
 }
