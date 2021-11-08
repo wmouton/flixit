@@ -1,10 +1,9 @@
 import React from 'react';
-// import the prop types from prop-types
 import PropTypes from 'prop-types';
-// import scss for button
+// import components
 import './button.scss';
 
-// button functional component
+// Button functional component
 const Button = (props) => {
 	return (
 		<button
@@ -16,6 +15,7 @@ const Button = (props) => {
 	);
 };
 
+// export outline button functional component
 export const OutlineButton = (props) => {
 	return (
 		<Button

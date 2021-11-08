@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-// imports from react-router
 import { useParams } from 'react-router';
-// imports from APIs
+// import from the movie database API file
 import tmdbApi from '../../api/tmdbApi';
+// import API configuration
 import apiConfig from '../../api/apiConfig';
 
 // cast list functional component
@@ -18,7 +18,6 @@ const CastList = (props) => {
 		};
 		getCredits();
 	}, [category, props.id]);
-
 	return (
 		<div className='casts'>
 			{casts.map((item, i) => (

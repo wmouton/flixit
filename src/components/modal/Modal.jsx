@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-// import prop types from 'prop-types
 import PropTypes from 'prop-types';
+// import scss
+import './modal.scss';
 
 // modal functional component
 const Modal = (props) => {
@@ -22,6 +23,7 @@ Modal.propTypes = {
 	id: PropTypes.string,
 };
 
+// export modal content functional component
 export const ModalContent = (props) => {
 	const contentRef = useRef(null);
 

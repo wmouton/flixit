@@ -1,15 +1,15 @@
 import React, { useState, useEffect, useCallback } from 'react';
-// imports from react-router
 import { useHistory, useParams } from 'react-router';
-// import css
+// import scss
 import './movie-grid.scss';
 // import components
 import MovieCard from '../movie-card/MovieCard';
 import Button, { OutlineButton } from '../button/Button';
 import Input from '../input/Input';
-// imports from the movie database API
+// import from the movie database API file
 import tmdbApi, { category, movieType, tvType } from '../../api/tmdbApi';
 
+// movie grid functional component
 const MovieGrid = (props) => {
 	const [items, setItems] = useState([]);
 
@@ -18,7 +18,6 @@ const MovieGrid = (props) => {
 
 	const { keyword } = useParams();
 
-	// handles the response
 	useEffect(() => {
 		const getList = async () => {
 			let response = null;
@@ -45,7 +44,7 @@ const MovieGrid = (props) => {
 		getList();
 	}, [props.category, keyword]);
 
-	// handles load more functionality
+	// handle load more functionality async await
 	const loadMore = async () => {
 		let response = null;
 		if (keyword === undefined) {
@@ -93,15 +92,11 @@ const MovieGrid = (props) => {
 	);
 };
 
-export default MovieGrid;
-
-// handles the search of movies
 const MovieSearch = (props) => {
 	const history = useHistory();
 
 	const [keyword, setKeyword] = useState(props.keyword ? props.keyword : '');
 
-	// checks search input
 	const goToSearch = useCallback(() => {
 		if (keyword.trim().length > 0) {
 			history.push(`/${category[props.category]}/search/${keyword}`);
@@ -135,3 +130,5 @@ const MovieSearch = (props) => {
 		</div>
 	);
 };
+
+export default MovieGrid;

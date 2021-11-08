@@ -1,11 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-// import link from react-router-dom
 import { Link, useLocation } from 'react-router-dom';
 // import scss
 import './header.scss';
+// import logo
 import logo from '../../assets/img/flixit.png';
 
-// header nav object
 const headerNav = [
 	{
 		display: 'Home',
@@ -13,7 +12,7 @@ const headerNav = [
 	},
 	{
 		display: 'Movies',
-		path: '/movies',
+		path: '/movie',
 	},
 	{
 		display: 'TV Series',
@@ -21,12 +20,11 @@ const headerNav = [
 	},
 ];
 
-// the header functional component
+// header functional component
 const Header = () => {
 	const { pathname } = useLocation();
 	const headerRef = useRef(null);
 
-	// check if path === pathname
 	const active = headerNav.findIndex((e) => e.path === pathname);
 
 	useEffect(() => {
@@ -47,7 +45,7 @@ const Header = () => {
 	}, []);
 
 	return (
-		<div className='header' ref={headerRef}>
+		<div ref={headerRef} className='header'>
 			<div className='header__wrap container'>
 				<div className='logo'>
 					<Link to='/'>
@@ -56,7 +54,7 @@ const Header = () => {
 				</div>
 				<ul className='header__nav'>
 					{headerNav.map((e, i) => (
-						<li className={`${i === active ? 'active' : ''}`} key={i}>
+						<li key={i} className={`${i === active ? 'active' : ''}`}>
 							<Link to={e.path}>{e.display}</Link>
 						</li>
 					))}

@@ -1,13 +1,12 @@
 import React from 'react';
-// import use params from react-router
 import { useParams } from 'react-router';
 // import components
 import PageHeader from '../components/page-header/PageHeader';
 import MovieGrid from '../components/movie-grid/MovieGrid';
-// import API
+// import from the movie database API
 import { category as cate } from '../api/tmdbApi';
 
-// the catalog functional component
+// catelog functional component
 const Catalog = () => {
 	const { category } = useParams();
 

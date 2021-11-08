@@ -1,25 +1,21 @@
 import React, { useState, useEffect, useRef } from 'react';
-// import use history from react-router
-import { useHistory } from 'react-router';
-// import swiper
 import SwiperCore, { Autoplay } from 'swiper';
-// import from swiper-react
 import { Swiper, SwiperSlide } from 'swiper/react';
 // import components
 import Button, { OutlineButton } from '../button/Button';
 import Modal, { ModalContent } from '../modal/Modal';
-// import API
+// import from the movie database API file
 import tmdbApi, { category, movieType } from '../../api/tmdbApi';
 // import API configuration
 import apiConfig from '../../api/apiConfig';
-// import css
+// import scss
 import './hero-slide.scss';
+import { useHistory } from 'react-router';
 
 // hero slide functional component
 const HeroSlide = () => {
 	SwiperCore.use([Autoplay]);
 
-	// add state and initialize to empty array
 	const [movieItems, setMovieItems] = useState([]);
 
 	useEffect(() => {
@@ -29,8 +25,7 @@ const HeroSlide = () => {
 				const response = await tmdbApi.getMoviesList(movieType.popular, {
 					params,
 				});
-				// slice to 4 results
-				setMovieItems(response.results.slice(0, 3));
+				setMovieItems(response.results.slice(1, 4));
 				console.log(response);
 			} catch {
 				console.log('error');
@@ -66,18 +61,15 @@ const HeroSlide = () => {
 	);
 };
 
-// hero slide item functional component
 const HeroSlideItem = (props) => {
-	let history = useHistory();
+	let hisrory = useHistory();
 
 	const item = props.item;
 
-	// original background movie image
 	const background = apiConfig.originalImage(
 		item.backdrop_path ? item.backdrop_path : item.poster_path
 	);
 
-	// set modal to active functional component
 	const setModalActive = async () => {
 		const modal = document.querySelector(`#modal_${item.id}`);
 
@@ -105,7 +97,7 @@ const HeroSlideItem = (props) => {
 					<h2 className='title'>{item.title}</h2>
 					<div className='overview'>{item.overview}</div>
 					<div className='btns'>
-						<Button onClick={() => history.push('/movie/' + item.id)}>
+						<Button onClick={() => hisrory.push('/movie/' + item.id)}>
 							Watch now
 						</Button>
 						<OutlineButton onClick={setModalActive}>
@@ -121,7 +113,6 @@ const HeroSlideItem = (props) => {
 	);
 };
 
-// trailer modal functional component
 const TrailerModal = (props) => {
 	const item = props.item;
 

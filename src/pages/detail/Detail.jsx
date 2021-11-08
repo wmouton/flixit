@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
-// imports from react-router
 import { useParams } from 'react-router';
-// import api configurations
+// import from the movie database API file
 import tmdbApi from '../../api/tmdbApi';
+// import API configuration
 import apiConfig from '../../api/apiConfig';
-// import css
+// import scss
 import './detail.scss';
-// import components
+// import pages
 import CastList from './CastList';
-// import VideoList from './VideoList';
+import VideoList from './VideoList';
+// import components
 import MovieList from '../../components/movie-list/MovieList';
 
-// the detail functional component
+// detail functional component
 const Detail = () => {
 	const { category, id } = useParams();
 
@@ -64,13 +65,13 @@ const Detail = () => {
 								<div className='section__header'>
 									<h2>Casts</h2>
 								</div>
-								<CastList id={item.id}/>
+								<CastList id={item.id} />
 							</div>
 						</div>
 					</div>
 					<div className='container'>
 						<div className='section mb-3'>
-							{/* <VideoList id={item.id}/> */}
+							<VideoList id={item.id} />
 						</div>
 						<div className='section mb-3'>
 							<div className='section__header mb-2'>

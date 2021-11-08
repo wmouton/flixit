@@ -1,18 +1,14 @@
 import React, { useState, useEffect } from 'react';
-// import prop types from prop-types
 import PropTypes from 'prop-types';
-// import css
+// import scss
 import './movie-list.scss';
-// import swiper slide and swiper from swiper/react
 import { SwiperSlide, Swiper } from 'swiper/react';
-// import link from react-router-dom
-import { Link } from 'react-router-dom';
-// import components
-import Button from '../button/Button';
+// import from the movie database API file
 import tmdbApi, { category } from '../../api/tmdbApi';
-import apiConfig from '../../api/apiConfig';
+// import components
 import MovieCard from '../movie-card/MovieCard';
 
+// movie list functional component
 const MovieList = (props) => {
 	const [items, setItems] = useState([]);
 
@@ -35,7 +31,7 @@ const MovieList = (props) => {
 			setItems(response.results);
 		};
 		getList();
-	}, []);
+	}, [props.category, props.type, props.id]);
 
 	return (
 		<div className='movie-list'>

@@ -1,14 +1,13 @@
 import React from 'react';
-// import link from react-router-dom
 import { Link } from 'react-router-dom';
 // import components
+import { OutlineButton } from '../components/button/Button';
 import HeroSlide from '../components/hero-slide/HeroSlide';
 import MovieList from '../components/movie-list/MovieList';
-import { OutlineButton } from '../components/button/Button';
-// import from tmdbApi
+// import from the movie database API
 import { category, movieType, tvType } from '../api/tmdbApi';
 
-// the home functional component
+// home functional component
 const Home = () => {
 	return (
 		<>
@@ -23,6 +22,7 @@ const Home = () => {
 					</div>
 					<MovieList category={category.movie} type={movieType.popular} />
 				</div>
+
 				<div className='section mb-3'>
 					<div className='section__header mb-2'>
 						<h2>Top Rated Movies</h2>
@@ -32,6 +32,7 @@ const Home = () => {
 					</div>
 					<MovieList category={category.movie} type={movieType.top_rated} />
 				</div>
+
 				<div className='section mb-3'>
 					<div className='section__header mb-2'>
 						<h2>Trending TV</h2>

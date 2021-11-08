@@ -1,7 +1,8 @@
 import React from 'react';
-
+// import scss
 import './input.scss';
 
+// input functional component
 const Input = (props) => {
 	return (
 		<input

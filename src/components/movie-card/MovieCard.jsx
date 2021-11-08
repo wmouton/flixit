@@ -1,13 +1,15 @@
 import React from 'react';
-// import css
+// import scss
 import './movie-card.scss';
-// import link from react-router-dom
 import { Link } from 'react-router-dom';
 // import components
 import Button from '../button/Button';
+// import from the movie database API file
 import { category } from '../../api/tmdbApi';
+// import API configuration
 import apiConfig from '../../api/apiConfig';
 
+// movie card functional component
 const MovieCard = (props) => {
 	const item = props.item;
 
