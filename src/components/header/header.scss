@@ -1,5 +1,21 @@
 @use '../../scss/' as *;
 
+.wm-logo {
+	@include flex(center, unset);
+
+	img {
+		margin-right: 10px;
+		margin-left: 100px;
+		width: 70px;
+		padding-top: 7px;
+
+		@include mobile {
+			width: 40px;
+			margin-right: 0;
+		}
+	}
+}
+
 .logo {
 	@include flex(center, unset);
 
@@ -9,7 +25,7 @@
 		padding-top: 7px;
 
 		@include mobile {
-			width: 30px;
+			width: 70px;
 			margin-right: 0;
 		}
 	}
