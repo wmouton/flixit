@@ -1,4 +1,6 @@
 // configure the API
+require('dotenv').config();
+
 const apiConfig = {
 	baseUrl: 'https://api.themoviedb.org/3/',
 	apiKey: '',
