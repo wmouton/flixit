@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import './header.scss';
 // import logo
 import logo from '../../assets/img/flixit.png';
-import wmlogo from '../../assets/img/wm.png';
+import l33th from '../../assets/img/l33th.png';
 
 const headerNav = [
 	{
@@ -55,7 +55,7 @@ const Header = () => {
 				</div>
 				<div className='wm-logo'>
 					<Link to='/'>
-						<img src={wmlogo} alt='wm-logo' />
+						<img src={l33th} alt='wm-logo' />
 					</Link>
 				</div>
 				<ul className='header__nav'>
