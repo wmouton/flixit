@@ -16,17 +16,20 @@ const Footer = () => {
 						<Link to='/'>
 							<img src={logo} alt='' />
 							<h4>Movies & Series</h4>
+							<br />
 						</Link>
 					</div>
 				</div>
-				<div className='footer__content__menus'>
+					<center>
+						<h4>Copyright © 2022, WMouton</h4>
+					</center>
+				{/* <div className='footer__content__menus'>
 					<div className='footer__content__menu'>
 						<Link to='/'>Home</Link>
 						<Link to='/'>Contact us</Link>
-						{/* <Link to='/'>Terms of service</Link> */}
 						<Link to='/'>About us</Link>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
