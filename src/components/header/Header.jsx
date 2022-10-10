@@ -3,8 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 // import scss
 import './header.scss';
 // import logo
-import logo from '../../assets/img/flixit.png';
-import l33th from '../../assets/img/l33th.png';
+import logo from '../../assets/img/flixit.svg';
+import l33th from '../../assets/img/l33th.svg';
 
 const headerNav = [
 	{

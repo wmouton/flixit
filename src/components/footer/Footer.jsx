@@ -4,7 +4,7 @@ import './footer.scss';
 import { Link } from 'react-router-dom';
 // import components
 import bg from '../../assets/img/footer-bg.jpg';
-import logo from '../../assets/img/flixit.png';
+import logo from '../../assets/img/flixit.svg';
 
 // footer functional component
 const Footer = () => {
@@ -19,14 +19,20 @@ const Footer = () => {
 						</Link>
 					</div>
 				</div>
-				<div className='footer__content__menus'>
+				<center>
+					<h4>Developed by <a style={{color: '#3FC2FC'}} href="https://wmouton.vercel.app">WMouton</a><br /><div style={{fontSize: '12px'}}>In collaboration with <a style={{color: '#3FC2FC'}} href="https://github.com/5n0weirdo">Snoweirdo</a></div></h4>
+				</center>
+				<br />
+					<center>
+						<h4>Copyright © 2022, <a href="https://flixit.netlify.app">Flixit</a></h4>
+					</center>
+				{/* <div className='footer__content__menus'>
 					<div className='footer__content__menu'>
 						<Link to='/'>Home</Link>
 						<Link to='/'>Contact us</Link>
-						{/* <Link to='/'>Terms of service</Link> */}
 						<Link to='/'>About us</Link>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);
