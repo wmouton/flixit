@@ -6,7 +6,7 @@
 	img {
 		margin-right: 10px;
 		margin-left: 100px;
-		width: 83px;
+		width: 69px;
 		padding-top: 7px;
 
 		@include mobile {
@@ -42,7 +42,7 @@
 
 	&.shrink {
 		height: $header-shrink-height;
-		background-color: $body-bg;
+		background-color: $header-on-scroll-color
 	}
 
 	&__wrap {
