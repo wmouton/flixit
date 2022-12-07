@@ -16,7 +16,7 @@ Flixit Movies and Series Website Written in ReactJS and SASS.
 git clone https://github.com/l33th/flixit-movies-series-project
 cd flixit-movies-series-project
 pnpm install
-pnpm run dev
+pnpm run start
 ```
 
 ## Usage NPM
@@ -25,7 +25,7 @@ pnpm run dev
 git clone https://github.com/l33th/flixit-movies-series-project
 cd flixit-movies-series-project
 npm install
-npm run dev
+npm run start
 ```
 
 > When the server is up and running, open your browser and navigate to localhost:3000
